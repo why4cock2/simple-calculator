@@ -1,0 +1,54 @@
+from colorama import init, Fore, Style
+import time
+
+init(autoreset=True)
+
+def run_calculator():
+    try:
+        a = int(input(Fore.CYAN + 'Enter first number: ' + Style.RESET_ALL))
+        b = int(input(Fore.CYAN + 'Enter second number: ' + Style.RESET_ALL))
+    except ValueError:
+        print(Fore.RED + "Error: Please enter valid integers." + Style.RESET_ALL)
+        return
+
+    c = input(Fore.MAGENTA + 'Enter operation (+, -, *, /): ' + Style.RESET_ALL)
+
+    if c == '+':
+        print(Fore.GREEN + 'Result: ' + str(a + b) + Style.RESET_ALL)
+    elif c == '-':
+        print(Fore.GREEN + 'Result: ' + str(a - b) + Style.RESET_ALL)
+    elif c == '*':
+        print(Fore.GREEN + 'Result: ' + str(a * b) + Style.RESET_ALL)
+    elif c == '/':
+        if b != 0:
+            print(Fore.GREEN + 'Result: ' + str(a / b) + Style.RESET_ALL)
+        else:
+            print(Fore.RED + 'Error: Division by zero is not allowed.' + Style.RESET_ALL)
+    else:
+        print(Fore.RED + 'Invalid operation.' + Style.RESET_ALL)
+
+def calculator():
+    menu_items = [
+        "----Menu----",
+        "1. Run Calculator",
+        "2. Exit"
+    ]
+    colors = [Fore.BLUE, Fore.CYAN, Fore.LIGHTCYAN_EX]
+
+    while True:
+        for i, item in enumerate(menu_items):
+            print(colors[i] + item + Style.RESET_ALL)
+
+        choice = input(Fore.MAGENTA + 'Enter your choice: ' + Style.RESET_ALL)
+
+        if choice == '1':
+            run_calculator()
+        elif choice == '2':
+            print(Fore.RED + 'Exiting... Goodbye!' + Style.RESET_ALL)
+            break
+        else:
+            print(Fore.RED + 'Invalid choice, please try again.' + Style.RESET_ALL)
+
+        time.sleep(0.5)  
+
+calculator()
