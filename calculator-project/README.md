@@ -1,51 +1,34 @@
-# 🧮 Simple Console Calculator
+# Colorful Calculator Console App
 
-A beginner-friendly calculator written in Python.  
-Supports addition, subtraction, multiplication, and division.
-
----
-
-## 📌 Features
-
-- Menu system with options
-- Handles division by zero
-- Clean structure using functions
-- Easy to use from console
+A simple Python console calculator featuring a colorful interactive menu with smooth color transitions.  
+The program allows you to perform basic arithmetic operations with a user-friendly interface.
 
 ---
 
-## ▶️ How to Run
+## Description
 
-Make sure Python is installed.
+This app provides an interactive menu with the following options:  
+1. Addition  
+2. Subtraction  
+3. Multiplication  
+4. Division  
+5. Exit the program  
 
-Then run the script from terminal or command prompt:
+The menu uses ANSI 256-color codes for enhanced terminal colors and improves user experience.
 
+---
+
+## Requirements
+
+- Python 3.x  
+- No external libraries required (uses built-in input and math operations)  
+- ANSI escape sequences support in your terminal (most modern terminals support this)
+
+---
+
+## How to Run
+
+1. Save the code into a file, for example `calculator.py`.  
+2. Run the script in your terminal:  
 ```bash
 python calculator.py
-```
-
----
-
-## 💡 Example Output
-
-```
-Welcome!
-----Menu----
-1. Run Calculator
-2. Exit
-Enter your choice: 1
-Enter first number: 10
-Enter second number: 2
-Enter operation (+, -, *, /): /
-Result: 5.0
-```
-
----
-
-## 📁 Project Structure
-
-```
-calculator-project/
-├── calculator.py
-└── README.md
-```
